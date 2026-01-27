@@ -1,0 +1,610 @@
+/* 전체 배경 */
+.page {
+  min-height: 100vh;
+  background: #f5f6f8;
+  padding: 16px;
+}
+
+/* 공통 카드 */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* 헤더 */
+.header-card {
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+}
+
+.sub {
+  margin-top: 6px;
+  margin-bottom: 0;
+  color: #666;
+  font-size: 13px;
+}
+
+/* 레이아웃 유틸 */
+.row {
+  display: flex;
+  gap: 10px;
+}
+.space-between { justify-content: space-between; }
+.align-center { align-items: center; }
+.center { text-align: center; }
+.mt8 { margin-top: 8px; }
+.mt12 { margin-top: 12px; }
+.mt16 { margin-top: 16px; }
+
+/* 입력 */
+.label {
+  font-size: 13px;
+  color: #444;
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 13px;
+}
+
+/* 리스트 */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recipe-card {
+  padding: 16px;
+}
+
+.recipe-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* 알약 */
+.pill {
+  background: #f1f3f5;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: #333;
+}
+
+/* 메타 */
+.meta {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+
+.tiny {
+  font-size: 12px;
+}
+
+.muted {
+  color: #888;
+}
+
+/* 뱃지 */
+.badge-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.badge {
+  display: inline-block;
+  background: #e7f0ff;
+  color: #2563eb;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* 버튼 */
+.btn {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn.primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn.ghost {
+  background: white;
+  border: 1px solid #ddd;
+  color: #111;
+}
+
+/* 하단 탭 네비게이션 */
+.app-container {
+  padding-bottom: 80px; /* 네비게이션 높이만큼 패딩 추가 */
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #e5e5e5;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.04);
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px;
+  flex: 1;
+}
+
+.nav-btn.active {
+  color: #2563eb;
+}
+
+/* 추가된 레이아웃, 폼 스타일 */
+.flex-grow { flex-grow: 1; }
+.gap8 { gap: 8px; }
+
+.input {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 14px;
+}
+
+/* 팬트리 리스트 스타일 */
+.pantry-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pantry-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.pantry-item-name {
+  font-weight: 600;
+}
+
+.pantry-item-quantity {
+  color: #555;
+}
+
+.btn-delete {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2px;
+}
+
+/* 피드백 배너 */
+.feedback-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #2e7d32;
+  animation: feedbackSlideIn 0.3s ease-out, feedbackFadeOut 0.4s 3.1s ease-in forwards;
+}
+
+.feedback-icon {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+@keyframes feedbackSlideIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes feedbackFadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* 디버그 테이블 */
+.debug-table {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.debug-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.debug-label {
+  color: #555;
+}
+
+.debug-value {
+  font-weight: 600;
+  color: #111;
+}
+
+/* 장보기 목록 details */
+.shopping-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #444;
+}
+
+.shopping-list {
+  margin: 6px 0 0 0;
+  padding-left: 18px;
+  font-size: 13px;
+  color: #555;
+}
+
+/* dev-details */
+.dev-details {
+  font-size: 12px;
+  color: #666;
+}
+
+.dev-details summary {
+  cursor: pointer;
+}
+
+.mt4 { margin-top: 4px; }
+
+/* recipe-card-link 스타일 리셋 */
+.recipe-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.shopping-list {
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+/* 관리자 디버그 화면 */
+.admin-debug-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.admin-debug-table th,
+.admin-debug-table td {
+  border: 1px solid #e0e0e0;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+.admin-debug-table th {
+  background: #f5f5f5;
+  font-weight: 600;
+}
+
+.admin-debug-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 14px;
+}
+
+.admin-debug-label {
+  color: #555;
+}
+
+.admin-debug-value {
+  font-weight: 600;
+}
+
+.admin-debug-section {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.admin-debug-section ul {
+  margin: 4px 0 0 16px;
+  padding: 0;
+}
+
+.admin-debug-detail {
+  background: #fafafa;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+/* 레시피 이미지 공통 스타일 */
+.recipe-hero-img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.recipe-step-img {
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+/* 레시피 상세 페이지 레이아웃 개선 */
+.recipe-detail-page .ingredients-box {
+  white-space: pre-line;
+  line-height: 1.6;
+}
+
+.recipe-detail-page .source-box {
+  font-size: 12px;
+  color: #888;
+}
+
+.list-decimal {
+  list-style: decimal;
+}
+
+.pl20 {
+  padding-left: 20px;
+}
+
+.mb12 {
+  margin-bottom: 12px;
+}
+
+/* ========== 이미지 규격 통일 (썸네일/디테일/스텝) ========== */
+
+/* (A) 리스트/등록 페이지 썸네일: 작은 정사각형 */
+.recipe-image-placeholder {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 72px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f2f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipe-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* (B) 레시피 디테일 대표 이미지: 16:9 고정 */
+.recipe-hero-image {
+  width: 100%;
+  height: 220px;            /* 필요하면 200~260 사이로 조절 */
+  object-fit: cover;
+  border-radius: 16px;
+  background: #f2f4f6;
+  display: block;
+}
+
+/* (C) 레시피 디테일 단계 이미지: 16:9 고정 (조금 더 작게) */
+.recipe-step-image {
+  width: 100%;
+  height: 180px;            /* 필요하면 160~220 사이로 조절 */
+  object-fit: cover;
+  border-radius: 14px;
+  background: #f2f4f6;
+  display: block;
+}
+
+/* (선택) 디테일 카드 안에서 이미지가 텍스트를 압도하지 않게 여백 */
+.recipe-detail-page .card img {
+  margin-bottom: 10px;
+}
+
+/* ===== LoginScreen Toss Style Override ===== */
+
+.login-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.login-header {
+    margin-bottom: 60px; /* 여백 증가 */
+}
+
+.login-title {
+    font-size: 28px;
+    font-weight: 800; /* Bold */
+    margin: 0 0 12px 0;
+    color: #191919;
+}
+
+.login-subtitle {
+    color: #4D4D4D;
+    font-size: 16px; /* 폰트 크기 증가 */
+    line-height: 1.5;
+    margin: 0;
+}
+
+.login-btn-group {
+    width: 100%;
+    max-width: 340px; /* 너비 증가 */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 80px; /* 하단 푸터 notice와의 간격 확보 */
+}
+
+/* 1. Primary Button (Toss) */
+.btn-toss-primary {
+    width: 100%;
+    height: 52px;
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    background-color: #0064FF;
+    color: white;
+    font-size: 16px;
+    font-weight: 500; /* Medium */
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-toss-primary:disabled {
+    background-color: #E5E8EB;
+    color: #A9B0B8;
+    cursor: not-allowed;
+}
+
+.login-toss-notice {
+    font-size: 12px;
+    color: #8A8A8A;
+    margin: -4px 0 4px 0;
+}
+
+/* 2. Secondary Button (Demo User) */
+.btn-toss-secondary {
+    width: 100%;
+    height: 52px;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #E5E8EB; /* 옅은 회색 테두리 */
+    background-color: white;
+    color: #4D4D4D;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-toss-secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.btn-toss-secondary:hover:not(:disabled) {
+    background-color: #F7F8FA;
+}
+
+
+/* 3. Tertiary Button (Demo Admin) */
+.btn-toss-tertiary {
+    width: 100%;
+    height: 48px;
+    padding: 14px;
+    border: none;
+    background: none;
+    color: #8A8A8A;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.2s;
+}
+
+.btn-toss-tertiary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-toss-tertiary:hover:not(:disabled) {
+    background-color: #F7F8FA;
+}
+
+
+/* Divider */
+.login-divider {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.login-divider::before,
+.login-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: #F0F1F3; /* 더 옅은 회색 */
+}
+
+.login-divider-text {
+    padding: 0 12px;
+    color: #B0B8C1;
+    font-size: 12px;
+}
+
+/* Error Message */
+.login-error-msg {
+    margin-top: 20px;
+    color: #F44336; /* 배경 없이 텍스트 색상만 */
+    font-size: 14px;
+    max-width: 340px;
+}
+
+/* Footer Notice */
+.login-footer-notice {
+    position: absolute;
+    bottom: 20px;
+    font-size: 12px;
+    color: #AAAAAA;
+    max-width: 280px;
+    line-height: 1.5;
+}
