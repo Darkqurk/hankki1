@@ -236,3 +236,6 @@ Thumbs.db
 # ===== AI tools =====
 .claude/
 d1b6780 (init)
+
+nul
+**/nul
